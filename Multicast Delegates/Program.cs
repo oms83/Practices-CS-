@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Delegations
+namespace Multicast_Delegates
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.ReadKey();
+            clsFilter.Start();
 
+            Console.ReadKey();
         }
     }
 }

@@ -40,15 +40,5 @@ public class clsSimpleDelegate
         {
             Caller();
         }
-
-        /*
-         Called Functions
-         hello world!
-         this is a print2 fuction
-         this is an anonymous function
-         
-         Called Functions
-         this is an anonymous function
-        */
     }
 }

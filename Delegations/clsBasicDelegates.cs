@@ -1,8 +1,5 @@
-﻿
-using System;
-
-
-public class clsSimpleDelegate
+﻿using System;
+public class clsBasicDelegates
 {
     private delegate void CallFunction();
     static CallFunction Caller;
@@ -50,4 +47,17 @@ public class clsSimpleDelegate
             this is an anonymous function 
         */
     }
+
 }
+    /*
+        static void Main(string[] args)
+        {
+            clsBasicDelegates.SubscribeToDelegates();
+            clsBasicDelegates.CallFunctions1();
+            clsBasicDelegates.UnsubscribeToDelegates();
+            clsBasicDelegates.CallFunction2();
+
+            Console.ReadKey();
+
+        } 
+    */

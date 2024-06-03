@@ -1,0 +1,3 @@
+﻿Basic delegates are explicitly declared and can point to any method matching their signature. 
+They are declared using the delegate keyword.
+

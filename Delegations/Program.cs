@@ -10,10 +10,7 @@ namespace Delegations
     {
         static void Main(string[] args)
         {
-            clsSimpleDelegate.SubscribeToDelegates();
-            clsSimpleDelegate.CallFunctions1();
-            clsSimpleDelegate.UnsubscribeToDelegates();
-            clsSimpleDelegate.CallFunction2();
+            clsDel2.PrintMessageByDel("Hello World!");
 
             Console.ReadKey();
 

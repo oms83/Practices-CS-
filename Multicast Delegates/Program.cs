@@ -10,7 +10,7 @@ namespace Multicast_Delegates
     {
         static void Main(string[] args)
         {
-            clsFilter.Start();
+            clsDelOperations2.Calculate(100, 5);
 
             Console.ReadKey();
         }

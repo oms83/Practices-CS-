@@ -18,7 +18,7 @@ namespace Multicast_Delegates.Data_Back
             Console.WriteLine($"Event triggered by: {sender.GetType().Name}, PersonID: {Number}");
         }
 
-        public static void Star()
+        public static void Start()
         {
             SenderWithMulipleObjects program = new SenderWithMulipleObjects();
 

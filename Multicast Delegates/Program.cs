@@ -8,7 +8,7 @@ namespace Multicast_Delegates
     {
         static void Main(string[] args)
         {
-            SenderWithMulipleObjects.Star();
+            SenderWithMulipleObjects.Start();
 
             Console.ReadKey();
         }

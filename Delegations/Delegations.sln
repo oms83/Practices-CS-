@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic Delegates", "Basic De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multicast Delegates", "..\Multicast Delegates\Multicast Delegates.csproj", "{D760BE9B-601B-47D0-A81E-04AF25CEC341}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublisherSubscriberDesignPattern", "..\PublisherSubscriberDesignPattern\PublisherSubscriberDesignPattern.csproj", "{B992AF7E-106B-49C0-8688-00BECFD67727}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D760BE9B-601B-47D0-A81E-04AF25CEC341}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D760BE9B-601B-47D0-A81E-04AF25CEC341}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D760BE9B-601B-47D0-A81E-04AF25CEC341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B992AF7E-106B-49C0-8688-00BECFD67727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B992AF7E-106B-49C0-8688-00BECFD67727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B992AF7E-106B-49C0-8688-00BECFD67727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B992AF7E-106B-49C0-8688-00BECFD67727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

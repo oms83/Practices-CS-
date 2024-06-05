@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Multicast_Delegates
 {
@@ -10,7 +7,9 @@ namespace Multicast_Delegates
     {
         static void Main(string[] args)
         {
-            clsDelOperations2.Calculate(100, 5);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmMain());
 
             Console.ReadKey();
         }

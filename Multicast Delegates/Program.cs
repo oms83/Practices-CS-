@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Multicast_Delegates.Data_Back;
+using System;
 using System.Windows.Forms;
 
 namespace Multicast_Delegates
@@ -7,9 +8,7 @@ namespace Multicast_Delegates
     {
         static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            SenderWithMulipleObjects.Star();
 
             Console.ReadKey();
         }

@@ -68,6 +68,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Data Back\PublicFieldVSPublicEvent.cs" />
+    <Compile Include="Data Back\SenderWithMulipleObjects.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

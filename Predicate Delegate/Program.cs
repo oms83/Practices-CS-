@@ -75,9 +75,16 @@ namespace Predicate_Delegate
             int[] arrLessThanThree = Array.FindAll(arr, n => isLessThanThree(n)).ToArray();
             Console.WriteLine(string.Join(",", arrLessThanThree));
         }
+
+        public static void PredicateWithLINQ()
+        {
+            Predicate<string> startsWith = n => n.StartsWith("o");
+            Console.WriteLine(startsWith("omer memes"));
+            Console.WriteLine(startsWith("ali memes"));
+        }
         static void Main(string[] args)
         {
-            PredicateWithArray();
+            PredicateWithLINQ();
 
             Console.ReadKey();
         }

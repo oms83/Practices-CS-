@@ -82,9 +82,18 @@ namespace Action_Delegate
             button.Click += () => Console.WriteLine("button is clicked");
             button.simulateClick();
         }
+        public static void ChainingActionDelegates()
+        {
+            Action first = () => Console.WriteLine("first action ");
+            Action second = () => Console.WriteLine("second action ");
+            Action combined = first + second;
+            combined();
+            //first action
+            //second action
+        }
         static void Main(string[] args)
         {
-            ActionDelegateInAnEventHandler();
+            ChainingActionDelegates();
 
             Console.ReadKey();
         }

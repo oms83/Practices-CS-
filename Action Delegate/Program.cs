@@ -50,9 +50,17 @@ namespace Action_Delegate
             doubleNumbers(numbers);
             numbers.ForEach(number=>Console.WriteLine(number));
         }
+
+        public static void ActionDelegateForLogging()
+        {
+            // log to console
+            Action<string> logMessage = message => Console.WriteLine(message);
+            logMessage("This is a log entry.");
+        }
+
         static void Main(string[] args)
         {
-            UsingActionDelegateToModifyList();
+            ActionDelegateForLogging();
 
             Console.ReadKey();
         }

@@ -51,10 +51,28 @@ namespace Func_Delegates
             Console.WriteLine(personInfo(new clsPerson("Omer MEMES", 24)));
             Console.WriteLine(personInfo(new clsPerson("Ali MEMES", 22)));
         }
+        public static void FunctionWithMultipleTypesOfParameters()
+        {
+            Func<int, bool> isPrimary = x =>
+            {
+                if (x <= 1) return false;
+                
+                for (int i = 2; i < Math.Sqrt(x + 1); i++)
+                {
+                    if (x % i == 0) return false;
+                }
+
+                return true;
+            };
+
+            Console.WriteLine(isPrimary(7));
+            Console.WriteLine(isPrimary(5));
+            Console.WriteLine(isPrimary(34));
+        }
 
         static void Main(string[] args)
         {
-            FunctionWithCustomClass();
+            FunctionWithMultipleTypesOfParameters();
 
             Console.ReadKey();
         }

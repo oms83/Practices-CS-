@@ -7,8 +7,16 @@ namespace Predicate_Delegate
 {
     internal class Program
     {
+        public static void PredicateWithIntegers()
+        {
+            Predicate<int> isEven = x => x % 2 == 0;
+            Console.WriteLine(isEven(2));
+        }
         static void Main(string[] args)
         {
+            PredicateWithIntegers();
+
+            Console.ReadKey();
         }
     }
 }

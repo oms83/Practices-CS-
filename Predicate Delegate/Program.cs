@@ -61,6 +61,12 @@ namespace Predicate_Delegate
 
         }
 
+        public static void PredicateWithNullableTypes()
+        {
+            Predicate<int?> hasValue = x => x.HasValue;
+            Console.WriteLine(hasValue(4));
+            Console.WriteLine(hasValue(null));
+        }
         static void Main(string[] args)
         {
             CombiningPredicates();

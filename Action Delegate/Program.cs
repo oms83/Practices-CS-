@@ -24,9 +24,15 @@ namespace Action_Delegate
             Action<string> greet = name => Console.WriteLine($"Hello, {name}");
             greet("Omer MEMES");
         }
+
+        public static void ActionDelegateWithTwoParameters()
+        {
+            Action<int, int> sum = (a, b) => Console.WriteLine(a+b);
+            sum(10, 25);
+        }
         static void Main(string[] args)
         {
-            BasicActionDelegate();
+            ActionDelegateWithTwoParameters();
 
             Console.ReadKey();
         }

@@ -21,9 +21,16 @@ namespace Func_Delegates
             Console.WriteLine(clac(7));
 
         }
+
+        public static void FunctionwithTwoParameter()
+        {
+            Func<string, string, string> getInfo = (string name, string surname) => $"Name: {name}, Surname: {surname}";
+            Console.WriteLine(getInfo("Omer", "MEMES"));
+            Console.WriteLine(getInfo("Ali", "MEMES"));
+        }
         static void Main(string[] args)
         {
-            FunctionwithOneParameter();
+            FunctionwithTwoParameter();
 
             Console.ReadKey();
         }

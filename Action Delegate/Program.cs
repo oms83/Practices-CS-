@@ -13,6 +13,15 @@ using System.Threading;
 
 namespace Action_Delegate
 {
+    public class Button
+    {
+        public event Action Click;
+        public void simulateClick()
+        {
+            Click?.Invoke();
+        }
+    }
+
     internal class Program
     {
         public static void BasicActionDelegate()
@@ -66,10 +75,16 @@ namespace Action_Delegate
 
             print("hello world!");
         }
-
+        
+        public static void ActionDelegateInAnEventHandler()
+        {
+            Button button = new Button();
+            button.Click += () => Console.WriteLine("button is clicked");
+            button.simulateClick();
+        }
         static void Main(string[] args)
         {
-            ActionDelegateForLogging();
+            ActionDelegateInAnEventHandler();
 
             Console.ReadKey();
         }

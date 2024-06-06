@@ -6,9 +6,17 @@ namespace Event_Args_And_Delegates_And_Events
     {
         static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            caller.run();
+            Console.ReadKey();
         }
     }
 }
+
+/*
+                   -- Used to run form --
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1()); 
+
+*/

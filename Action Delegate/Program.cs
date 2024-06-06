@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Security.Policy;
 
 /*
     An Action delegate in C# is a predefined delegate type provided by the .NET Framework that 
@@ -16,6 +17,12 @@ namespace Action_Delegate
         {
             Action greet = () => Console.WriteLine("Hello World!");
             greet();
+        }
+
+        public static void ActionDelegateWithOneParameter()
+        {
+            Action<string> greet = name => Console.WriteLine($"Hello, {name}");
+            greet("Omer MEMES");
         }
         static void Main(string[] args)
         {

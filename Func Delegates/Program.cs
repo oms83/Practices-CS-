@@ -86,3 +86,5 @@ namespace Func_Delegates
         }
     }
 }
+
+// the Func delegate in C#. The Func delegate is a built-in delegate in .NET that represents a method that returns a value. It can have up to 16 input parameters.

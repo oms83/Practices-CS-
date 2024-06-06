@@ -3,9 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Func_Delegates
 {
+    public class clsPerson
+    {
+        public string name {  get; set; }
+        public int age { get; set; }
+
+        public clsPerson(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+    }
+
     internal class Program
     {
         public static void FunctionwithNoParameters()
@@ -28,9 +41,20 @@ namespace Func_Delegates
             Console.WriteLine(getInfo("Omer", "MEMES"));
             Console.WriteLine(getInfo("Ali", "MEMES"));
         }
+
+        public static void FunctionWithCustomClass()
+        {
+            //Func<clsPerson, string> personInfo = (clsPerson person) => $"Name: {person.name}, Age: {person.age}";
+
+            Func<clsPerson, string> personInfo = person => $"Name: {person.name}, Age: {person.age}";
+
+            Console.WriteLine(personInfo(new clsPerson("Omer MEMES", 24)));
+            Console.WriteLine(personInfo(new clsPerson("Ali MEMES", 22)));
+        }
+
         static void Main(string[] args)
         {
-            FunctionwithTwoParameter();
+            FunctionWithCustomClass();
 
             Console.ReadKey();
         }

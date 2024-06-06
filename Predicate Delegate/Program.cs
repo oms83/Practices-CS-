@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
+
 
 // the Predicate delegate in C#. The Predicate delegate represents a method that takes a single
 // parameter and returns a boolean value, typically used for testing conditions.
@@ -67,9 +67,17 @@ namespace Predicate_Delegate
             Console.WriteLine(hasValue(4));
             Console.WriteLine(hasValue(null));
         }
+
+        public static void PredicateWithArray()
+        {
+            int[] arr = { 1, 2, 3, 43, 542, 12, 12, -12, -43, 53, -21 };
+            Predicate<int> isLessThanThree = x => x < 3;
+            int[] arrLessThanThree = Array.FindAll(arr, n => isLessThanThree(n)).ToArray();
+            Console.WriteLine(string.Join(",", arrLessThanThree));
+        }
         static void Main(string[] args)
         {
-            CombiningPredicates();
+            PredicateWithArray();
 
             Console.ReadKey();
         }

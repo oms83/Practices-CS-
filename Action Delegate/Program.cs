@@ -57,6 +57,15 @@ namespace Action_Delegate
             Action<string> logMessage = message => Console.WriteLine(message);
             logMessage("This is a log entry.");
         }
+        public static void ActionDelegateWithAnonymousMethod()
+        {
+            Action<string> print = delegate (string message)
+            {
+                Console.WriteLine(message);
+            };
+
+            print("hello world!");
+        }
 
         static void Main(string[] args)
         {

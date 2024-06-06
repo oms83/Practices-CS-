@@ -5,6 +5,11 @@
 
 namespace Predicate_Delegate
 {
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
     internal class Program
     {
         public static void PredicateWithIntegers()
@@ -19,9 +24,18 @@ namespace Predicate_Delegate
             Console.WriteLine(isNullOrEmpty(""));
             Console.WriteLine(isNullOrEmpty("Omer MEMES"));
         }
+
+        public static void PredicateWithCustomClass()
+        {
+            Predicate<Person> isAdult = _person => _person.Age >= 18;
+
+            Person person = new Person { Age = 24, Name = "Omer MEMES" };
+
+            Console.WriteLine(isAdult(person));
+        }
         static void Main(string[] args)
         {
-            PredicateWithStrings();
+            PredicateWithCustomClass();
 
             Console.ReadKey();
         }

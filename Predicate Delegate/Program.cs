@@ -102,9 +102,25 @@ namespace Predicate_Delegate
                 key: 4,  value: three
             */
         }
+        public static void PredicateWithTuples()
+        {
+            List < Tuple<int, string>> data = new List<Tuple<int, string>>()
+            {
+                Tuple.Create(1, "one"),
+                Tuple.Create(2, "two"),
+                Tuple.Create(3, "three"),
+            };
+
+            Predicate<Tuple<int, string>> isGreaterThanTwo = x => x.Item1 > 2;
+
+            List<Tuple<int, string>> lstGreaterThanTwo = data.FindAll(x => isGreaterThanTwo(x)).ToList();
+            //List<Tuple<int, string>> lstGreaterThanTwo = data.Where(x => isGreaterThanTwo(x)).ToList(); LINQ
+
+            lstGreaterThanTwo.ForEach(x => Console.WriteLine(x)); // (3, three)
+        }
         static void Main(string[] args)
         {
-            PredicateWithDictionaries();
+            PredicateWithTuples();
 
             Console.ReadKey();
         }

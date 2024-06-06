@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Threading;
@@ -31,14 +32,27 @@ namespace Action_Delegate
             Action<int, int> sum = (a, b) => Console.WriteLine(a+b);
             sum(10, 25);
         }
-        public static void DelegateWithThreeParameters()
+        public static void ActionDelegateWithThreeParameters()
         {
             Action<string, short, bool> employeeInfo = (name, age, isActive) => Console.WriteLine($"Name: {name}, Age: {age}, isActive: {isActive}");
             employeeInfo("Omer MEMES", 23, true);
         }
+        public static void UsingActionDelegateToModifyList()
+        {
+            List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
+            Action<List<int>> doubleNumbers = nums =>
+            {
+                for (int i = 0; i < nums.Count; i++)
+                {
+                    numbers[i] *= 2;
+                }
+            };
+            doubleNumbers(numbers);
+            numbers.ForEach(number=>Console.WriteLine(number));
+        }
         static void Main(string[] args)
         {
-            DelegateWithThreeParameters();
+            UsingActionDelegateToModifyList();
 
             Console.ReadKey();
         }

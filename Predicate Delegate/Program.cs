@@ -12,9 +12,16 @@ namespace Predicate_Delegate
             Predicate<int> isEven = x => x % 2 == 0;
             Console.WriteLine(isEven(2));
         }
+
+        public static void PredicateWithStrings()
+        {
+            Predicate<string> isNullOrEmpty = (string str) => string.IsNullOrWhiteSpace(str);
+            Console.WriteLine(isNullOrEmpty(""));
+            Console.WriteLine(isNullOrEmpty("Omer MEMES"));
+        }
         static void Main(string[] args)
         {
-            PredicateWithIntegers();
+            PredicateWithStrings();
 
             Console.ReadKey();
         }

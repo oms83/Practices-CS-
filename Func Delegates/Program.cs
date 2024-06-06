@@ -14,9 +14,16 @@ namespace Func_Delegates
             Console.WriteLine(getGreeting());
         }
 
+        public static void FunctionwithOneParameter()
+        {
+            Func<int, int> clac = x => x * x ;
+            Console.WriteLine(clac(5));
+            Console.WriteLine(clac(7));
+
+        }
         static void Main(string[] args)
         {
-            FunctionwithNoParameters();
+            FunctionwithOneParameter();
 
             Console.ReadKey();
         }

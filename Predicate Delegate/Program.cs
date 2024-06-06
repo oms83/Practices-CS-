@@ -47,9 +47,23 @@ namespace Predicate_Delegate
             numbersGreaterThanThree.ForEach(n => Console.WriteLine(n));
 
         }
+
+        public static void CombiningPredicates()
+        {
+            Predicate<int> isOdd = x => x % 2 != 0;
+            Predicate<int> isPositive = x => x >= 0;
+
+            Predicate<int> isPositiveAndOdd = x => isOdd(x) && isPositive(x);
+
+            Console.WriteLine(isPositiveAndOdd(5));
+            Console.WriteLine(isPositiveAndOdd(53));
+            Console.WriteLine(isPositiveAndOdd(52));
+
+        }
+
         static void Main(string[] args)
         {
-            UsingPredicateInAList();
+            CombiningPredicates();
 
             Console.ReadKey();
         }

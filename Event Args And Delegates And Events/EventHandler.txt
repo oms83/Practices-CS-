@@ -1,0 +1,9 @@
+﻿An event handler in C# is a method that is called in response to an event. When an event occurs, 
+the event handler associated with that event is invoked to handle the event. Event handlers are 
+methods that match a specific delegate signature, typically EventHandler or EventHandler<TEventArgs>.
+
+Key Points:
+Method Signature: An event handler is a method that matches the delegate signature associated with the event.
+
+Association: Event handlers are associated with events using the += operator.
+Invocation: When an event is raised, all associated event handlers are called.

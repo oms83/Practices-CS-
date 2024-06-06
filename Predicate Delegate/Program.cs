@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
 
 // the Predicate delegate in C#. The Predicate delegate represents a method that takes a single
 // parameter and returns a boolean value, typically used for testing conditions.
@@ -33,9 +36,20 @@ namespace Predicate_Delegate
 
             Console.WriteLine(isAdult(person));
         }
+
+        public static void UsingPredicateInAList()
+        {
+            List<int> numbers = new List<int>() { 2, 2, -12, -213, 32, 3, 54, 75, 53, 31, 75, 12 };
+            
+            Predicate<int> isGreaterThanThree = x => x > 3;
+            List<int> numbersGreaterThanThree = numbers.FindAll(n => isGreaterThanThree(n));
+
+            numbersGreaterThanThree.ForEach(n => Console.WriteLine(n));
+
+        }
         static void Main(string[] args)
         {
-            PredicateWithCustomClass();
+            UsingPredicateInAList();
 
             Console.ReadKey();
         }

@@ -1,0 +1,9 @@
+﻿In C#, EventArgs is a base class provided by the .NET Framework that is used to pass data to 
+event handlers when an event is raised. It serves as a way to encapsulate event-specific data in a consistent manner.
+
+Key Points:
+Base Class: EventArgs is a base class that can be used directly or extended to include additional 
+event-specific information.
+
+Standard Event Pattern: Using EventArgs (or a derived class) follows the .NET event pattern, which helps in 
+creating consistent and easily understandable events.

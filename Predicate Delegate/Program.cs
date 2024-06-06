@@ -82,9 +82,29 @@ namespace Predicate_Delegate
             Console.WriteLine(startsWith("omer memes"));
             Console.WriteLine(startsWith("ali memes"));
         }
+
+        public static void PredicateWithDictionaries()
+        {
+            Dictionary<int, string> items = new Dictionary<int, string>
+            {
+                { 1, "one" },
+                { 2, "two" },
+                { 3, "three" },
+                { 4, "three" }
+            };
+
+            Predicate<KeyValuePair<int, string>> hasValueThree = kvp => kvp.Value == "three";
+            List<KeyValuePair<int, string>> matchingItems = items.Where(kvp=>hasValueThree(kvp)).ToList();
+            matchingItems.ForEach(kvp => Console.WriteLine($"key: {kvp.Key},  value: {kvp.Value}"));
+
+            /*
+                key: 3,  value: three
+                key: 4,  value: three
+            */
+        }
         static void Main(string[] args)
         {
-            PredicateWithLINQ();
+            PredicateWithDictionaries();
 
             Console.ReadKey();
         }

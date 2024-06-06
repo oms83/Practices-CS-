@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
+using System.Threading;
 
 /*
     An Action delegate in C# is a predefined delegate type provided by the .NET Framework that 
@@ -30,9 +31,14 @@ namespace Action_Delegate
             Action<int, int> sum = (a, b) => Console.WriteLine(a+b);
             sum(10, 25);
         }
+        public static void DelegateWithThreeParameters()
+        {
+            Action<string, short, bool> employeeInfo = (name, age, isActive) => Console.WriteLine($"Name: {name}, Age: {age}, isActive: {isActive}");
+            employeeInfo("Omer MEMES", 23, true);
+        }
         static void Main(string[] args)
         {
-            ActionDelegateWithTwoParameters();
+            DelegateWithThreeParameters();
 
             Console.ReadKey();
         }

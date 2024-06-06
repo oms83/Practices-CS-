@@ -70,9 +70,17 @@ namespace Func_Delegates
             Console.WriteLine(isPrimary(34));
         }
 
+        public static void UsingFuncInLINQ()
+        {
+            List<int> lst = new List<int>() { 1, 2, 3, 4, 5, 476, 65, 24, 76, 98 };
+            Func<int, bool> isEven = x => x % 2 == 0;
+            List<int> evenNumbers = lst.Where(isEven).ToList();
+            evenNumbers.ForEach(x=>Console.WriteLine(x + ", "));
+        }
+
         static void Main(string[] args)
         {
-            FunctionWithMultipleTypesOfParameters();
+            UsingFuncInLINQ();
 
             Console.ReadKey();
         }

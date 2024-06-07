@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms.Design;
+
 
 namespace Event_Args_And_Delegates_And_Events
 {
@@ -76,7 +72,6 @@ namespace Event_Args_And_Delegates_And_Events
             thermostat.SetTemperature(32);
             thermostat.SetTemperature(34);
             thermostat.SetTemperature(26);
-
         }
 
     }

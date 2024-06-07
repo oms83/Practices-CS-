@@ -6,7 +6,7 @@ namespace Event_Args_And_Delegates_And_Events
     {
         static void Main(string[] args)
         {
-            caller.run();
+            Caller.run();
             Console.ReadKey();
         }
     }

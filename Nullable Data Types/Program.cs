@@ -36,9 +36,28 @@ internal class Program
         }
 
     }
+
+    public struct stPersonInfo
+    {
+        public string FullName;
+        public int? Age;
+        public DateTime? DateOfBirth;
+    }
+
+    public static void Example4()
+    {
+        stPersonInfo personInfo = new stPersonInfo();
+        personInfo.FullName = "Omer MEMES";
+        personInfo.DateOfBirth = Convert.ToDateTime("03-08-2000");
+
+        Console.WriteLine($"Name: {personInfo.FullName}");
+        int age = personInfo.Age ?? 18;
+        Console.WriteLine($"Name: {age}");
+        Console.WriteLine($"Name: {personInfo.DateOfBirth}");
+    }
     static void Main(string[] args)
     {
-        Example3();
+        Example4();
 
         Console.ReadKey();
     }

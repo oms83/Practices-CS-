@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="clsBasicDelegates.cs" />
     <Compile Include="clsDel2.cs" />
+    <Compile Include="Logging.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

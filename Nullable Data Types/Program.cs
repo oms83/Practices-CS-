@@ -54,6 +54,16 @@ internal class Program
         int age = personInfo.Age ?? 18;
         Console.WriteLine($"Name: {age}");
         Console.WriteLine($"Name: {personInfo.DateOfBirth}");
+    } 
+    public static void Example5()
+    {
+        stPersonInfo personInfo = new stPersonInfo();
+        personInfo.FullName = "Omer MEMES";
+        personInfo.DateOfBirth = Convert.ToDateTime("03-08-2000");
+
+        Console.WriteLine($"Name: {personInfo.FullName}");
+        Console.WriteLine($"Name: {personInfo.Age ?? 18}");
+        Console.WriteLine($"Name: {personInfo.DateOfBirth}");
     }
     static void Main(string[] args)
     {

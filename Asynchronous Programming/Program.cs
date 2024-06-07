@@ -8,9 +8,9 @@ namespace Asynchronous_Programming
 {
     internal class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
-            await Example2.run();
+            Example3.run();
             Console.ReadKey();
         }
     }

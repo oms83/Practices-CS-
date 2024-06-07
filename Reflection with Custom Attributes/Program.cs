@@ -24,7 +24,8 @@ public class MyClass
 
 internal class Program
 {
-    static void Main(string[] args)
+
+    public static void run()
     {
         Type classInfo = typeof(MyClass);
         object[] classAttributes = classInfo.GetCustomAttributes(typeof(MyCustomAttribute), false);
@@ -35,12 +36,16 @@ internal class Program
         }
 
         MethodInfo methodInfo = classInfo.GetMethod("MyMethod");
-        object[] methodAttributes = methodInfo.GetCustomAttributes(typeof (MyCustomAttribute), false);
+        object[] methodAttributes = methodInfo.GetCustomAttributes(typeof(MyCustomAttribute), false);
         foreach (MyCustomAttribute attribute in methodAttributes)
         {
             Console.WriteLine(attribute.Description);
         }
-
+    }
+    static void Main(string[] args)
+    {
+        
+        Custom_Attribute_With_Validation.run();
         Console.ReadKey();
     }
 }

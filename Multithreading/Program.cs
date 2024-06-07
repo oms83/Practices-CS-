@@ -6,7 +6,7 @@ namespace Multithreading
     {
         static void Main(string[] args)
         {
-            Example3.run();
+            RaceCondation.run();
 
 
             Console.ReadKey();

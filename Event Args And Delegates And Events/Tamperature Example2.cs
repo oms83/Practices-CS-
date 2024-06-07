@@ -18,8 +18,8 @@ public class Thermostat
 {
     public event EventHandler<TemperatureChangeEventArgs> TemperatureChange;
 
-    public double OldTemperature;
-    public double CurrentTemperature;
+    private double OldTemperature;
+    private double CurrentTemperature;
     public void SetTemperature(double newTemperature)
     {
         if (newTemperature != CurrentTemperature)
@@ -32,7 +32,7 @@ public class Thermostat
         }
     }
 
-    public void OnTemperatureChanged(double newTemperature, double oldTemperature)
+    private void OnTemperatureChanged(double newTemperature, double oldTemperature)
     {
         OnTemperatureChanged(new TemperatureChangeEventArgs(newTemperature, oldTemperature));
     }
@@ -49,7 +49,7 @@ public class Display
         thermostat.TemperatureChange += HandleChangeTemperature;
     }
 
-    public void HandleChangeTemperature(object sender, TemperatureChangeEventArgs e)
+    private void HandleChangeTemperature(object sender, TemperatureChangeEventArgs e)
     {
         Action<string> Print = Message => Console.WriteLine(Message);
         

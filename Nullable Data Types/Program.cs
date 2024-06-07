@@ -85,10 +85,17 @@ internal class Program
         else
             Console.WriteLine("Age is null");
     }
+
+    public static void Example8(string Name, int? Age)
+    {
+        Console.WriteLine($"Name: {Name}");
+
+        Console.WriteLine($"Age: {Age ?? 18}");
+    }
     static void Main(string[] args)
     {
-        Example7("Omer MEMES", null);
-        Example7("Omer MEMES", 24);
+        Example8("Omer MEMES", null);
+        Example8("Omer MEMES", 24);
 
         Console.ReadKey();
     }

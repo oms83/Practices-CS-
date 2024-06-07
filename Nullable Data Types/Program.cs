@@ -75,10 +75,20 @@ internal class Program
         else
             Console.WriteLine("Age is null");
     }
+
+    public static void Example7(string Name, int ? Age)
+    {
+        Console.WriteLine($"Name: {Name}");
+
+        if (Age.HasValue)
+            Console.WriteLine($"Age: {Age}");
+        else
+            Console.WriteLine("Age is null");
+    }
     static void Main(string[] args)
     {
-        Example6("Omer MEMES", null);
-        Example6("Omer MEMES", 24);
+        Example7("Omer MEMES", null);
+        Example7("Omer MEMES", 24);
 
         Console.ReadKey();
     }

@@ -65,9 +65,20 @@ internal class Program
         Console.WriteLine($"Name: {personInfo.Age ?? 18}");
         Console.WriteLine($"Name: {personInfo.DateOfBirth}");
     }
+
+    public static void Example6(string Name, Nullable<int>Age)
+    {
+        Console.WriteLine($"Name: {Name}");
+
+        if (Age.HasValue) 
+            Console.WriteLine($"Age: {Age}");
+        else
+            Console.WriteLine("Age is null");
+    }
     static void Main(string[] args)
     {
-        Example4();
+        Example6("Omer MEMES", null);
+        Example6("Omer MEMES", 24);
 
         Console.ReadKey();
     }

@@ -10,7 +10,7 @@ namespace PublisherSubscriberDesignPattern
     {
         static void Main(string[] args)
         {
-            call.run();
+            Running.run();
 
             Console.ReadKey();
         }

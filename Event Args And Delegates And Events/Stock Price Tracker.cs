@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-public class Stock
+public class Stock : EventArgs
 {
     public decimal OldPrice { get; }
     public decimal NewPrice { get; }
@@ -14,7 +14,7 @@ public class Stock
     }
 }
 
-public class StockPriceTracker : EventArgs
+public class StockPriceTracker
 {
     public event EventHandler<Stock> StockChanged;
 

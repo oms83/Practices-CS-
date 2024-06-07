@@ -49,6 +49,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RaceCondation.cs" />
+    <Compile Include="Thread Synchronization.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -114,6 +114,8 @@ public class Running
 
         order.Create(123, 1, "oms@gmail.com");
         order.Create(545, 2, "ali@gmail.com");
+
+        phoneService.Unsubscribe(order);
         order.Create(686, 3, "omser@gmail.com");
     }
 }

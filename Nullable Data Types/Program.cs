@@ -22,9 +22,23 @@ internal class Program
         //string? Name = null;
         //Console.WriteLine(Name);
     }
+    public static void Example3()
+    {
+        int? Value = null;
+
+        if (Value.HasValue)
+        {
+            Console.WriteLine(Value);
+        }
+        else
+        {
+            Console.WriteLine("Value is null");
+        }
+
+    }
     static void Main(string[] args)
     {
-        Example1();
+        Example3();
 
         Console.ReadKey();
     }

@@ -27,7 +27,7 @@ public class People
     public string Name { get; set; }
 }
 
-internal class Custom_Attribute_With_Validation
+internal class Example1
 {
     public static void run()
     {

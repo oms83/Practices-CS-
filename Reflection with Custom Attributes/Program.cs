@@ -44,8 +44,8 @@ internal class Program
     }
     static void Main(string[] args)
     {
-        
-        Custom_Attribute_With_Validation.run();
+
+        Example2.run();
         Console.ReadKey();
     }
 }

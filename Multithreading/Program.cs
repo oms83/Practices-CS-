@@ -10,7 +10,7 @@ namespace Multithreading
     {
         static void Main(string[] args)
         {
-            Example1.run();
+            Example2.run();
 
 
             Console.ReadKey();

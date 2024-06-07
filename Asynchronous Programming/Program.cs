@@ -10,7 +10,7 @@ namespace Asynchronous_Programming
     {
         static async Task Main(string[] args)
         {
-            await Example1.run();
+            await Example2.run();
             Console.ReadKey();
         }
     }

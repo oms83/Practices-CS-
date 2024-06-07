@@ -16,7 +16,7 @@ namespace Multithreading
                 lock (sharedLock)
                 {
                     Console.WriteLine(sharedCounter++);
-                }
+                }   
 
                 Thread.Sleep(500);
             }

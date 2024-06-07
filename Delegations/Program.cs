@@ -10,7 +10,7 @@ namespace Delegations
     {
         static void Main(string[] args)
         {
-            Caller.run();
+            caller.run();
             Console.ReadKey();
 
         }

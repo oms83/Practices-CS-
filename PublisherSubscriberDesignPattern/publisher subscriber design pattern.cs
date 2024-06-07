@@ -47,7 +47,7 @@ public class EmailService
         order.OrderCreated -= HandleOrderCreated;
     }
 
-    public void HandleOrderCreated(object sender, OrderEventArgs e)
+    private void HandleOrderCreated(object sender, OrderEventArgs e)
     {
         Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine("\nEmail Service:");
@@ -68,7 +68,7 @@ public class PhoneService
         order.OrderCreated -= HandleOrderCreated;
     }
 
-    public void HandleOrderCreated(object sender, OrderEventArgs e)
+    private void HandleOrderCreated(object sender, OrderEventArgs e)
     {
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("\nPhone Service:");
@@ -89,7 +89,7 @@ public class ShippingService
         order.OrderCreated -= HandleOrderCreated;
     }
 
-    public void HandleOrderCreated(object sender, OrderEventArgs e)
+    private void HandleOrderCreated(object sender, OrderEventArgs e)
     {
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("\nShipping Service:");

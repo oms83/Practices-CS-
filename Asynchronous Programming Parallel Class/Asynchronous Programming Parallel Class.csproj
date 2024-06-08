@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Parallel_for.cs" />
     <Compile Include="Parallel_ForEach.cs" />
+    <Compile Include="Parallel_Invoke.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

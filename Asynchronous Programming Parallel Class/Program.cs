@@ -10,7 +10,7 @@ namespace Asynchronous_Programming_Parallel_Class
     {
         static void Main(string[] args)
         {
-            Parallel_ForEach.run();
+            Parallel_Invoke.run();
             Console.ReadKey();
         }
     }

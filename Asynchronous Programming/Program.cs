@@ -10,7 +10,7 @@ namespace Asynchronous_Programming
     {
         static void Main(string[] args)
         {
-            ClassRun.run();
+            Task_Factory_Class.run();
             Console.ReadKey();
         }
     }

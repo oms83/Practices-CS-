@@ -10,7 +10,7 @@ namespace Asynchronous_Programming
     {
         static void Main(string[] args)
         {
-            Example3.run();
+            Example4.run();
             Console.ReadKey();
         }
     }
